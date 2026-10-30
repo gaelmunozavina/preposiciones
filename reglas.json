@@ -1,0 +1,53 @@
+{
+  "catalogo_atomos": {
+    "llueve": "P1",
+    "hay sol": "P2"
+  },
+  "reglas": {
+    "001": {
+      "original": "llueve entonces no hay sol",
+      "proposiciones": [
+        "llueve",
+        "hay sol"
+      ],
+      "negadas": [
+        false,
+        true
+      ],
+      "posiciones": [
+        1,
+        2
+      ]
+    },
+    "002": {
+      "original": "si no llueve entonces hay sol",
+      "proposiciones": [
+        "llueve",
+        "hay sol"
+      ],
+      "negadas": [
+        true,
+        false
+      ],
+      "posiciones": [
+        1,
+        2
+      ]
+    },
+    "003": {
+      "original": "llueve entonces no llueve",
+      "proposiciones": [
+        "llueve",
+        "llueve"
+      ],
+      "negadas": [
+        false,
+        true
+      ],
+      "posiciones": [
+        1,
+        2
+      ]
+    }
+  }
+}
