@@ -1,18 +1,29 @@
 {
   "catalogo_atomos": {
-    "llueve": "P1",
-    "hay sol": "P2"
+    "como dona": "p",
+    "subire de peso": "q",
+    "como ensalada": "r",
+    "bajare de peso": "s"
   },
   "reglas": {
     "001": {
-      "original": "llueve entonces no hay sol",
+      "original": "si como dona entonces subire de peso",
+      "esquema": "p → q",
+      "tipo_esquema": "Condicional (Implicación)",
+      "conectores": [
+        "Condicional (→)"
+      ],
       "proposiciones": [
-        "llueve",
-        "hay sol"
+        "como dona",
+        "subire de peso"
       ],
       "negadas": [
         false,
-        true
+        false
+      ],
+      "simbolos": [
+        "p",
+        "q"
       ],
       "posiciones": [
         1,
@@ -20,14 +31,23 @@
       ]
     },
     "002": {
-      "original": "si no llueve entonces hay sol",
+      "original": "si como ensalada entonces bajare de peso",
+      "esquema": "r → s",
+      "tipo_esquema": "Condicional (Implicación)",
+      "conectores": [
+        "Condicional (→)"
+      ],
       "proposiciones": [
-        "llueve",
-        "hay sol"
+        "como ensalada",
+        "bajare de peso"
       ],
       "negadas": [
-        true,
+        false,
         false
+      ],
+      "simbolos": [
+        "r",
+        "s"
       ],
       "posiciones": [
         1,
@@ -35,18 +55,32 @@
       ]
     },
     "003": {
-      "original": "llueve entonces no llueve",
+      "original": "si como dona y como ensalada entonces subire de peso",
+      "esquema": "(p ∧ r) → q",
+      "tipo_esquema": "Condicional (Implicación)",
+      "conectores": [
+        "Condicional (→)",
+        "Conjunción (∧)"
+      ],
       "proposiciones": [
-        "llueve",
-        "llueve"
+        "como dona",
+        "como ensalada",
+        "subire de peso"
       ],
       "negadas": [
         false,
-        true
+        false,
+        false
+      ],
+      "simbolos": [
+        "p",
+        "r",
+        "q"
       ],
       "posiciones": [
         1,
-        2
+        2,
+        3
       ]
     }
   }
